@@ -23,14 +23,9 @@ function EventBus() {
       throw Error("无效事件");
     }
     if (this.eventList[event]) {
-      let index = this.eventList[event].indexOf(callback);
-    //   if (index !== -1) {
-    //     this.eventList[event].splice(index, 1);
-    //   }
-    //   if (arguments.length === 1) {
-    //     delete this.eventList[event];
-    //   }
-    index === -1 ? delete this.eventList[event] : this.eventList[event].splice(index, 1)
+    //   let index = this.eventList[event].indexOf(callback);
+    // index === -1 ? delete this.eventList[event] : this.eventList[event].splice(index, 1)
+    this.eventList[event].indexOf(callback)? delete this.eventList[event] : this.eventList[event].splice(index, 1)
     }
   }
 }
