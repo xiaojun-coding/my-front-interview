@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防抖函数实现</title>
+</head>
+<body>
+    <input type="text" class="ipt">
+    <script src="./index.js"></script>
+    <script>
+        const input = document.querySelector('.ipt')
+        // input输入框防抖 inputOnchange： 回调函数
+        input.addEventListener('input', debunce(inputOnchange, 500))
+        function inputOnchange(e) {
+            console.log(e.target.value)
+        }
+        
+        
+    </script>
+    
+</body>
+</html>
