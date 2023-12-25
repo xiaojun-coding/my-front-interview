@@ -23,3 +23,12 @@ console.log("test", _instanceof(null, Array)); // false
 console.log("test", _instanceof([], Array)); // true
 console.log("test", _instanceof("", Array)); // false
 console.log("test", _instanceof({}, Object)); // true
+
+
+var arr = [1,2,3,4,5,6,7]
+
+for(const item of arr) {
+    arr.shift()
+    console.log(arr)
+}
+
